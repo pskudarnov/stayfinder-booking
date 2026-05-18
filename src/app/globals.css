@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --background: #fcf9f4;
+  --surface: #ffffff;
+  --surface-soft: #f6f3ee;
+  --surface-muted: #ebe8e3;
+  --text: #1c1c19;
+  --text-muted: #58605e;
+  --primary: #1e302f;
+  --primary-strong: #091b1a;
+  --secondary: #3b6752;
+  --outline: #d6ddd9;
+  --ring: #2f5a47;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif), Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+input,
+select,
+button,
+textarea {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid var(--outline);
+  background: var(--surface);
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.section-shell {
+  border: 1px solid color-mix(in srgb, var(--outline) 70%, white);
+  background: color-mix(in srgb, var(--surface) 90%, var(--surface-soft));
+  box-shadow: 0 12px 30px rgba(15, 28, 27, 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
